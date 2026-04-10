@@ -3,3 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
+.imagenes_1{
+    width: 560px;
+    height: auto;
+    margin: 15px;
+}
