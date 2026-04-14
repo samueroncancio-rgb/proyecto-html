@@ -1,6 +1,5 @@
 
-# proyecto-html
-aqui montare las carpetas para html y css
+# proyecto-htmt
 
 Media queries, diseño responsivo, optimización de Javascript básico
  
