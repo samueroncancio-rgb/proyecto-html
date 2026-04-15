@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-CO">
 
 <head>
     <meta charset="UTF-8">
@@ -18,12 +18,12 @@
     <nav class="barra_navegacion">
         <img src="" alt="">
         <ul class="links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#line_time">Line time</a></li>
-            <li><a href="#projects">Proyects</a></li>
-            <li><a href="">Galeria</a></li>
-            <li><a href="">contact</a></li>
+            <li><a href="#inicio" class="link">Inicio</a></li>
+            <li><a href="#about" class="link">About me</a></li>
+            <li><a href="#line_time" class="link">Line time</a></li>
+            <li><a href="#projects" class="link">Proyects</a></li>
+            <li><a href="#gallery" class="link">Galeria</a></li>
+            <li><a href="#contact" class="link">contact</a></li>
         </ul>
     </nav>
     
@@ -129,13 +129,56 @@
         </div>
 
     </section>
-    <section ></section>
+    <section class="gallery" id="gallery" >
+        <h2 class="title">Galería</h2>
+        <div class="gallery_container">
+            <div class="gallery_subcontainer">
+                <div class="gallery_item"><img src="public/img/mascotas.img" alt=""></div>
+                <div class="gallery_item"><img src="public/img/mascotas.img" alt=""></div>
+                <div class="gallery_item"><img src="public/img/mascotas.img" alt=""></div>
+                <div class="gallery_item"><img src="public/img/mascotas.img" alt=""></div>
+                <div class="gallery_item"><img src="public/img/mascotas.img" alt=""></div>
+                <div class="gallery_item"><img src="public/img/mascotas.img" alt=""></div>
+                <button class="prev btn"><</button>
+                <button class="next btn">></button>
+            </div>
+        </div>
+
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="title">Contacto</h2>
+        
+        <form action="">
+            <h3>Contáctanos</h3>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ej:Samuel Roncancio">
+
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" placeholder="samuel@example">
+
+            <label for="teléfono">Telefono</label>
+            <input type="tel" id="telefono" placeholder="3220000000">
+
+            <label for="mensaje">dejanos tu mensaje</label>
+            <textarea id="mensaje" placeholder="deja tu mensaje"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+    </section>
 </main>
 <footer>
+    <p>by:Samuel Roncancio. Todos los derechos reservados</p>
+    <div class="social_media">
+        <a href="" class="link_social_media"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="" class= "link_social_media"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href=""class= "link_social_media"><i class="fa-brands fa-github"></i></a>
+        <a href=""class="link_social_media"><i class="fa-brands fa-square-whatsapp"></i></a>
+    </div>
 
 </footer>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
