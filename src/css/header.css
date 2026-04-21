@@ -5,58 +5,92 @@
     top: 0;
     left: 0;
     z-index: 1000;
-
 }
-.barra_navegacion{
+
+.logo{
+    width: auto;
+    height: 4rem;
+}
+
+.barra-navegacion{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color:var(--color_secundario);
     align-items: center;
+    background-color: var(--color-secundario);
     padding: 2.5rem;
-
 }
+
 .links{
+    background-color: var(--color-secundario);
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    position: absolute;
+    padding: 40px;
+    width: 70%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    z-index: 100;
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
     list-style: none;
     font-size: 1.8rem;
-
-}
-.link {
-    color: var(--color_negro);
-    transition: color .3s ease;
-
-}
-.link:hover{
-    color: var(--color_principal);
 }
 
-.link::after{
-    content:'' ;
-    display: block;
-    height: 0.3rem;
-    width: 0;
-    background-color: var(--color_principal);
-    margin-top: 0.3rem;
-    border-radius: 1rem;
-    transition: width .3s ease;
-
-}
-.link:hover::after{
+.overlay{
+    position: absolute;
+    height: 100vh;
     width: 100%;
+    background-color: #0009;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .3s;
+}
+
+.visible{
+    transform: translateX(0);
 }
 
 .menu{
-   padding: 1rem;
-   width: fit-content;
-   background-color: transparent;
-   border: 0.1rem solid var(--color_principal);
-   color: var(--color_principal);
-   border-radius: 0.4rem;
-   display: none;
+    display: block;
+    position: relative;
+    z-index: 1000;
+    padding: 0.8rem 1rem;
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 0.1rem solid var(--color-principal);
+    border-radius: 0.4rem;
 }
+
 .fa-bars{
     font-size: 18px;
+}
+
+.link{
+    color: var(--color-negro);
+    transition: color .3s ease;
+}
+
+.link:hover{
+    color: var(--color-principal);
+}
+
+.link::after{
+    content: '';
+    display: block;
+    height: 0.3rem;
+    width: 0;
+    background-color: var(--color-principal);
+    margin-top: 0.3rem;
+    border-radius: 1rem;
+    transition: width .3s ease;
+}
+
+.link:hover::after{
+    width: 100%;
 }

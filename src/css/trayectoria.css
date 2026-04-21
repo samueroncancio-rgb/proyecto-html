@@ -1,43 +1,44 @@
-* Trayectoria*/
-.line_time{
+/* Trayectoria*/
+.line-time{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.linea_tiempo{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    
 
-}
-.container_line_time{
+.container-lime-time{
     display: flex;
     gap: 3rem;
-    justify-content: center;
-    max-width: 87rem;
-    
-
 }
+
 .linea{
-    width: 0.2rem;
-    background-color: var(--color_negro);
+    width: 0.4rem;
+    background-color: var(--color-negro);
     border-radius: 1.2rem;
 }
-.item_line_time{
-    background-color: var(--color_terciario);
+
+.linea-tiempo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.item-line-time{
+    background-color: var(--color-terciario);
     padding: 4rem;
-    border-radius: 1.5rem;
+    border-radius: 1.2rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-.linea_tiempo time{
-    background-color: var(--color_secundario);
+
+time{
+    background-color: var(--color-secundario);
     padding: 0.8rem;
     border-radius: 0.8rem;
-    color: var(--color_principal);
+    color: var(--color-principal);
     font-size: 1.5rem;
 }
+

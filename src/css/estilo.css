@@ -17,72 +17,201 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth ;
 }
-html{
-    font-size: 62.5%;
-}
-:root{
-    --color_principal:#fff;
-    --color_secundario:#607d3b;
-    --color_terciario:#eee;
-    --color_negro:#000;
 
+html{
+    font-size: 62.5%; /*font-size: 10rem;*/
 }
+
+:root{
+    --color-principal:#fff;
+    --color-secundario:#607d3b;
+    --color-terciario:#eee;
+    --color-negro:#000;
+}
+
+/* Elementos Generales */
 
 body{
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    
+}
 
+.no-scroll{
+    overflow: hidden;
 }
 
 a{
     text-decoration: none;
 }
+
 h1{
-    font-size: 6rem;
+    font-size: 5rem;
 }
+
 h2{
-    font-size: 3rem;
-}
-p{
-    font-size: 1.8rem;
-}
-h3{
-    font-size: 2.5rem;
-}
-h4{
     font-size: 2rem;
-
 }
-label{
+
+h3{
     font-size: 1.8rem;
 }
 
+h4{
+    font-size: 1.4rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+label{
+    font-size: 1.2rem;
+}
 
 main{
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
+
 section{
     scroll-margin-top: 10rem;
 }
-/*clases globales*/
+
+/* Clases Globales*/
 .title{
     text-align: center;
     margin-bottom: 3rem;
 }
+
 .title::after{
     content: "";
     display: block;
-    width: 10rem;
-    height: 0.3rem;
-    background-color: var(--color_secundario);
-    margin: 1rem auto 0;
+    width: 8rem; 
+    height: 0.3rem; 
+    background-color:var(--color-secundario); 
+    margin: 1rem auto 0; 
     border-radius: 0.5rem;
 }
 
-.max_width{
-    max-width: 90rem;
+.max-width{
+    max-width: 30rem;
 }
 
+/*diseño responsive*/
+@media screen and (min-width : 576px){
+    h1{
+        font-size: 6rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    h4{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    label{
+        font-size: 1.8rem;
+    }
+
+    /* Clases Globales */
+    .max-width{
+        max-width: 70rem;
+    }
+
+    .inicio-img{
+        height: 30rem;
+        width:  30rem; 
+    }
+
+}
+
+
+/* Responsive Design — Desktop */
+@media screen and (min-width: 992px) {
+
+    h1{
+        font-size: 6rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    h4{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    label{
+        font-size: 1.8rem;
+    }
+
+    /* Clases Globales */
+    .max-width{
+        max-width: 90rem;
+    }
+
+    /* Header Section */
+    .links{
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        position: static;
+        padding: 0;
+        width: auto;
+        height: auto;
+        text-align: left;
+        transform: none;
+        transition: none;
+        z-index: auto;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    /* Inicio Section */
+    .inicio{
+        padding: 8rem;
+        flex-direction: row;
+    }
+
+    .inicio-info{
+        align-items: flex-start;
+        text-align: left;
+        max-width: 60rem;
+    }
+
+    .inicio-img{
+        height: 40rem;
+        width: 40rem; 
+    }
+
+    /* Contact Section */
+    input,textarea{
+        font-size: 1.6rem;
+    }
+
+    /* Gallery Section */
+    .btn{
+        padding: 1rem 1.5rem;
+    }
+
+
+    /* Footer Section */
+    footer{
+        text-align: left;
+    }
+}
