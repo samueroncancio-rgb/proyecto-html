@@ -1,73 +1,104 @@
+# Portafolio — proyecto-html
 
-# proyecto-htmt
+Sitio web estático (portafolio + proyecto de tienda de mascotas) creado con HTML, CSS y JavaScript puro. Este repositorio contiene una página principal con secciones de biografía, trayectoria, proyectos, galería y contacto, además de una vista de proyecto (Tienda de mascotas).
 
-Media queries, diseño responsivo, optimización de Javascript básico
- 
-Objetivo de la Historia de usuario
-El objetivo de este taller es tomar el portafolio desarrollado en las semanas anteriores y convertirlo en un sitio responsivo, optimizado y con interactividad básica aplicando:
+## Resumen rápido
 
-    Media queries y buenas prácticas de CSS.
-    Optimización del código CSS.
-    Fundamentos básicos de JavaScript (manipulación del DOM e interacción simple con botones).
+- Autor: Samuel Roncancio
+- Tecnologías: HTML5, CSS3 (organizado por módulos), JavaScript ES6
+- Tipo: Sitio estático responsivo
+- Carpeta principal de recursos: `public/img` (imágenes usadas en la web)
 
- 
-Descripción de las tareas
-TASK 1
-1. Retomar el proyecto:
+## Características principales
 
-    Abre el portafolio trabajado en las semanas anteriores.
-    Conserva los archivos index.html, mascotas.html y style.css.
-    Crea un archivo nuevo llamado script.js.
-    Enlázalo en tu index.html justo antes de cerrar la etiqueta </body>.
+- Diseño responsivo con media queries (estilos separados en `src/css/principal` y `src/css/pets`).
+- Menú móvil con overlay y bloqueo de scroll (implementado en `src/views/script.js`).
+- Página de proyecto "Mis Mascotas" con catálogo de productos estático (`src/views/mis-mascotas.html` + `src/css/pets/mis-mascotas.css`).
+- Interactividad básica: alert de bienvenida, menú desplegable y cierre por overlay.
 
-TASK 2
-2. Media queries:
+## Estructura del repositorio
 
-    Define un media query para móviles (pantallas pequeñas) en el que:
-        El menú de navegación cambie a columna.
-        Los proyectos se organicen en una sola columna.
-        La galería de imágenes se reduzca a 2 columnas.
-    Define un media query para tablets (pantallas medianas) en el que:
-        Los proyectos se organicen en 2 columnas.
-        La galería tenga 3 columnas.
-    En pantallas grandes (escritorio), mantén el layout de 3 o más columnas.
+- `index.html` — Página principal del portafolio.
+- `README.md` — Este archivo.
+- `public/` — Imágenes y recursos estáticos (logos, fotos, galería).
+- `src/`
+    - `css/` — Hojas de estilo separadas por secciones (principal y pets).
+    - `views/` — HTML y scripts adicionales:
+        - `mis-mascotas.html` — vista del proyecto "Tienda de mascotas".
+        - `script.js` — script principal (menú, overlay, alert de bienvenida).
+        - `mascotas.js` — script usado por la vista de mascotas (toggle del menú en esa vista).
 
-TASK 3
-3. Imágenes y texto responsivos:
+Ejemplo rápido:
 
-    Asegúrate de que todas las imágenes usen max-width: 100% y height: auto.
-    Cambia los tamaños de fuente a valores relativos (rem o %) para que escalen mejor en distintas pantallas.>
+```
+index.html
+src/
+    css/
+        principal/
+        pets/
+    views/
+        mis-mascotas.html
+        script.js
+        mascotas.js
+public/
+    img/
+```
 
-TASK 4
-4. Optimización del CSS:
+## Cómo ejecutar el proyecto localmente
 
-    Agrupa reglas comunes (por ejemplo, estilos repetidos en botones o tarjetas).
-    Evita selectores demasiado largos o específicos, usa clases simples y claras.
-    Define variables globales de color y tipografía en :root.
-    Simula la minificación de tu archivo CSS eliminando espacios y comentarios innecesarios en una copia llamada style.min.css.
+Este es un sitio estático; puedes abrir `index.html` directamente en el navegador o usar un servidor local para que las rutas funcionen correctamente.
 
-TASK 5
-5. JavaScript - Agregando interactividad:
-Ahora es el momento de darle vida a tu portafolio con un poco de JavaScript básico:
+Método rápido (Python 3):
 
-    Usa el archivo script.js que creaste en la Tarea 1 y enlázalo en tu index.html antes de la etiqueta </body>.
-    Dale interactividad:
-        Cambia el texto de un párrafo al hacer clic en un botón.
-        Muestra un mensaje de bienvenida en pantalla.
-        Haz que un botón responda con un efecto dinámico (por ejemplo, mostrar/ocultar contenido).
+1. Instala la extension llamada live server en tu editor de codigo.
 
-El objetivo es que explores cómo JavaScript puede modificar el contenido y reaccionar a las acciones del usuario, agregando un primer nivel de dinamismo a tu portafolio.
- 
-Criterios de aceptación
+2. Activa el servidor local
 
-    El portafolio de semana 2 se ha retomado y mejorado.
-    Se han aplicado correctamente Media queries para móviles, tablets y escritorio.
-    Todas las imágenes son responsivas con max-width: 100%.
-    El texto usa unidades relativas (rem, %) en lugar de píxeles fijos.
-    El CSS está optimizado: reglas agrupadas y variables globales en :root.
-    El código es limpio, indentado y con comentarios claros.
-    El proyecto incluye un archivo script.js correctamente enlazado en el index.html.
-    Al hacer clic en un botón, se ejecuta una acción que modifica el contenido de la página (ejemplo: cambiar el texto de un párrafo o mostrar un mensaje).
-    La interacción funciona de manera visible y responde a la acción del usuario.
-    El código JavaScript está indentado, comentado de forma básica y sin errores en la consola del navegador.
+3. Abre `http://localhost:5101` en tu navegador.
+
+Nota: usar un servidor evita problemas con rutas absolutas o CORS y hace que los enlaces a `src/` y `public/` funcionen como en producción.
+
+## Qué revisar / detalles técnicos
+
+- El `index.html` enlaza `src/css/principal/estilo.css` y `src/views/script.js`.
+- `script.js` contiene:
+    - Una alerta inicial: `alert("Bienvenido a mi pagina web")`.
+    - Lógica para alternar visibilidad del menú y overlay, y para bloquear el scroll del body.
+- `mis-mascotas.html` usa `mascotas.js` para alternar el menú de esa vista.
+
+## Buenas prácticas y recomendaciones (siguientes pasos)
+
+- Añadir un título en la etiqueta `<title>` de `index.html`.
+- Evitar `alert()` en producción; reemplazar por un modal más accesible.
+- Añadir roles y atributos ARIA para mejorar la accesibilidad del menú y formularios.
+- Validar y limpiar etiquetas meta y contenido repetido.
+- Minificar y combinar CSS/JS para producción y servirlos desde rutas relativas correctas.
+- Añadir un pequeño CI que valide HTML/CSS (ej. linters) si se desea calidad continua.
+
+## Cómo contribuir
+
+1. Haz un fork del repositorio.
+2. Crea una rama con tu feature: `git checkout -b feature/nombre`.
+3. Haz commits claros y atómicos.
+4. Abre un Pull Request describiendo los cambios.
+
+Si quieres que yo implemente alguno de los siguientes puntos, dime cuál y lo hago:
+
+- Añadir un modal de bienvenida en lugar de `alert()`.
+- Mejorar el formulario de contacto (validación, envío con Formspree o similar).
+- Añadir pruebas o linters (HTMLHint, stylelint).
+
+## Licencia
+
+Pon aquí tu licencia preferida (por ejemplo, `MIT`) o indica que todos los derechos están reservados.
+
+---
+
+Si quieres, puedo:
+
+- Generar capturas de pantalla y añadirlas al README.
+- Añadir un badge con la licencia o estado del build.
+- Crear un pequeño script npm para servir el sitio (`http-server`).
+
+Dime qué prefieres y lo implemento.
 
