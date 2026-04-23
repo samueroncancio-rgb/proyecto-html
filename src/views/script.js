@@ -1,3 +1,5 @@
+alert("Bienvenido a mi pagina web")
+
 const menu = document.querySelector(".menu");
 const links = document.querySelector(".links");
 const link = document.querySelectorAll(".link");

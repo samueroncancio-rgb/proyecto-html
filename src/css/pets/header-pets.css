@@ -1,0 +1,51 @@
+/*header mascotas*/
+.header{
+    width: 100%;
+    background-color:#7fb183;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.barra-navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.titulo span img{
+    width: 6rem;
+    border-radius: 20%;
+}
+
+.links{
+    display: flex;
+    gap: 5rem;
+}
+
+.link a{
+    text-decoration: none;
+    color: #000;
+    transition: color .3s ease;
+}
+
+.links a:hover{
+    color: #fff;
+}
+.menu{
+    display: none;
+    position: relative;
+    z-index: 1000;
+    padding: 0.8rem 1rem;
+    background-color: transparent;
+    color: #eee;
+    border: #7fb183;
+    border-radius: 0.4rem;
+    
+}
