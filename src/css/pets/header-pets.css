@@ -1,18 +1,17 @@
 /*header mascotas*/
-.header{
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
     width: 100%;
     background-color:#7fb183;
     position: fixed;
     top: 0;
     left: 0;
 }
-.barra-navegacion{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem;
-}
-
 .titulo{
     display: flex;
     justify-content: center;
@@ -23,11 +22,96 @@
     width: 6rem;
     border-radius: 20%;
 }
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #333;
+    color: #fff;
+}
+
+/* LINKS EN ESCRITORIO */
+.links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+/* BOTÓN HAMBURGUESA OCULTO EN DESKTOP */
+.menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* OVERLAY */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+} 
+
+
+/* ========================= */
+/* 📱 RESPONSIVE (TABLET/MÓVIL) */
+/* ========================= */
+@media (max-width: 768px) {
+
+    /* Mostrar botón */
+    .menu {
+        display: block;
+    }
+
+    /* Menú oculto inicialmente */
+    .links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #222;
+        flex-direction: column;
+        padding: 60px 20px;
+        transition: right 0.3s ease;
+    }
+
+    /* Menú activo */
+    .links.active {
+        right: 0;
+    }
+
+    #overlay.active {
+        display: block;
+    }
+}
+/* .
+.barra-navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+
 
 .links{
     display: flex;
     gap: 5rem;
 }
+
 
 .link a{
     text-decoration: none;
@@ -49,3 +133,17 @@
     border-radius: 0.4rem;
     
 }
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #0009;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    transition: all .3s;
+}
+
+.visible{
+    transform: translateX(0);
+} */
