@@ -27,9 +27,61 @@ Sitio web estático (portafolio + proyecto de tienda de mascotas) creado con HTM
         - `mis-mascotas.html` — vista del proyecto "Tienda de mascotas".
         - `script.js` — script principal (menú, overlay, alert de bienvenida).
         - `mascotas.js` — script usado por la vista de mascotas (toggle del menú en esa vista).
+C:.
+│   index.html
+│   README.md
+│   
+├───.vscode
+│       settings.json
+│       
+├───public
+│   ├───dosc
+│   ├───icons
+│   └───img
+│           abogado.webp
+│           bolsa.avif
+│           capa.avif
+│           collar.jpg
+│           conejo.avif
+│           galeria2.avif
+│           galeria3.avif
+│           galeria4.avif
+│           galeria5.avif
+│           galeria6.avif
+│           gorro.avif
+│           kit.jpg
+│           LOGO-INICIO.png
+│           logo-mascota.png
+│           mascotas.img
+│           mi_foto.jpeg
+│           
+└───src
+    ├───css
+    │   ├───pets
+    │   │       footer-pets.css
+    │   │       header-pets.css
+    │   │       main-pets.css
+    │   │       mis-mascotas.css
+    │   │       
+    │   └───principal
+    │           biografia.css
+    │           contactos.css
+    │           estilo.css
+    │           footer.css
+    │           gallery.css
+    │           header.css
+    │           inicio.css
+    │           proyectos.css
+    │           trayectoria.css
+    │           
+    ├───js
+    │       mascotasMenu.js
+    │       script.js
+    │       
+    └───views
+            mis-mascotas.html
 
 
-```
 
 ## Cómo ejecutar el proyecto localmente
 
@@ -45,35 +97,6 @@ Método rápido (Python 3):
 
 Nota: usar un servidor evita problemas con rutas absolutas o CORS y hace que los enlaces a `src/` y `public/` funcionen como en producción.
 
-## Qué revisar / detalles técnicos
-
-- El `index.html` enlaza `src/css/principal/estilo.css` y `src/views/script.js`.
-- `script.js` contiene:
-    - Una alerta inicial: `alert("Bienvenido a mi pagina web")`.
-    - Lógica para alternar visibilidad del menú y overlay, y para bloquear el scroll del body.
-- `mis-mascotas.html` usa `mascotas.js` para alternar el menú de esa vista.
-
-## Buenas prácticas y recomendaciones (siguientes pasos)
-
-- Añadir un título en la etiqueta `<title>` de `index.html`.
-- Evitar `alert()` en producción; reemplazar por un modal más accesible.
-- Añadir roles y atributos ARIA para mejorar la accesibilidad del menú y formularios.
-- Validar y limpiar etiquetas meta y contenido repetido.
-- Minificar y combinar CSS/JS para producción y servirlos desde rutas relativas correctas.
-- Añadir un pequeño CI que valide HTML/CSS (ej. linters) si se desea calidad continua.
-
-## Cómo contribuir
-
-1. Haz un fork del repositorio.
-2. Crea una rama con tu feature: `git checkout -b feature/nombre`.
-3. Haz commits claros y atómicos.
-4. Abre un Pull Request describiendo los cambios.
-
-Si quieres que yo implemente alguno de los siguientes puntos, dime cuál y lo hago:
-
-- Añadir un modal de bienvenida en lugar de `alert()`.
-- Mejorar el formulario de contacto (validación, envío con Formspree o similar).
-- Añadir pruebas o linters (HTMLHint, stylelint).
 
 ## Licencia
 
